@@ -4,3 +4,45 @@
     font-size: 7em;
   }
 }
+.category-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    height: 100%;
+}
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.category-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: white;
+    line-height: 1;
+}
+.category-icon i {
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+}
+.category-icon.teal { background-color: #a8d5d8; }
+.category-icon.orange { background-color: #f5b86d; }
+.category-icon.blue { background-color: #a8c8e8; }
+.category-icon.tan { background-color: #d4c5a0; }
+.category-icon.purple { background-color: #c4b5e8; }
+.category-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}

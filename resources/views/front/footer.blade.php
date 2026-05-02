@@ -91,11 +91,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-5 col-md-6 mb-4">
-            <div class="footer-brand">Discover Egypt</div>
-            <p class="footer-description">Plan trips, explore destinations, and discover the best of Egypt from ancient landmarks to beaches, cruises, and desert escapes.</p>
+            <div class="footer-brand">{{ __('footer.discover_egypt') }}</div>
+            <p class="footer-description">{{ __('footer.description') }}</p>
             <div class="footer-badge">
               <i class="fa fa-map-marker"></i>
-              <span>Curated travel experiences across Egypt</span>
+              <span>{{ __('footer.curated_experiences') }}</span>
             </div>
           </div>
 
@@ -136,7 +136,7 @@
 
         <div class="row footer-meta align-items-center">
           <div class="col-md-6 text-md-left text-center mb-2 mb-md-0">
-            © <script>document.write(new Date().getFullYear())</script> Voile Du Nil. All rights reserved.
+            © <script>document.write(new Date().getFullYear())</script> Voile Du Nil. {{ __('footer.rights') }}.
           </div>
           <div class="col-md-6 text-md-right text-center">
             Made with <i class="fa fa-heart heart"></i> for Egypt travel inspiration.
@@ -145,18 +145,18 @@
       </div>
     </footer>
     <!--   Core JS Files   -->
-    <script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
-    <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
-    <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/assets/js/core/jquery.min.js" type="text/javascript"></script>
+    <script src="/assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
     <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-    <script src="./assets/js/plugins/bootstrap-switch.js"></script>
+    <script src="/assets/js/plugins/bootstrap-switch.js"></script>
     <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-    <script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+    <script src="/assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
     <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
-    <script src="./assets/js/plugins/moment.min.js"></script>
-    <script src="./assets/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script src="/assets/js/plugins/moment.min.js"></script>
+    <script src="/assets/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
     <!-- Control Center for Paper Kit: parallax effects, scripts for the example pages etc -->
-    <script src="./assets/js/paper-kit.js?v=2.2.0" type="text/javascript"></script>
+    <script src="/assets/js/paper-kit.js?v=2.2.0" type="text/javascript"></script>
     <!--  Google Maps Plugin    -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
     <script>
