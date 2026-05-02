@@ -10,6 +10,19 @@
    {{ __('navigation.brand') }} - {{ __('home.title') }}
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!-- In resources/views/front/header.blade.php -->
+@php
+  $locales = ['en', 'fr', 'es', 'de', 'ru', 'ar'];
+  $currentPath = request()->path();
+  $pathWithoutLocale = str_replace(app()->getLocale() . '/', '', $currentPath);
+@endphp
+
+<!-- Hreflang tags -->
+<link rel="canonical" href="{{ url(app()->getLocale() . '/' . $pathWithoutLocale) }}" />
+@foreach($locales as $lang)
+  <link rel="alternate" hreflang="{{ $lang }}" href="{{ url($lang . '/' . $pathWithoutLocale) }}" />
+@endforeach
+<link rel="alternate" hreflang="x-default" href="{{ url('en/' . $pathWithoutLocale) }}" />
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
