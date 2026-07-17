@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\URL;
 use Symfony\Component\HttpFoundation\Response;
 
 class SetLocale
@@ -27,6 +28,9 @@ class SetLocale
 
         // Set the application locale
         app()->setLocale($locale);
+
+        // Make locale-aware named routes resolve without passing locale everywhere
+        URL::defaults(['locale' => $locale]);
 
         // Share locale with views
         view()->share('locale', $locale);

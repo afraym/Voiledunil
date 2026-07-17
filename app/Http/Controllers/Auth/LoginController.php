@@ -25,16 +25,17 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
         $this->middleware('auth')->only('logout');
+    }
+
+    /**
+     * Get the path the user should be redirected to after login.
+     */
+    protected function redirectTo(): string
+    {
+        return route('home', ['locale' => app()->getLocale()]);
     }
 }
